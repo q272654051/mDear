@@ -50,7 +50,7 @@ public class CustomerServiceImpl  extends BaseDao<Customer> implements ICustomer
 	@Override
 	public List<Customer> findCustomerByNameAndPwd(String name, String pwd) {
 		String sql = "from Customer u where u.userName = '"+name+"' and pwd='"+pwd+"'";
-		List list = findByHQLQuery(sql);
+		List<Customer> list = findByHQLQuery(sql);
 		return list;
 	}
 
