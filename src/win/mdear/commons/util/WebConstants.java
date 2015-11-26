@@ -14,7 +14,6 @@ import win.mdear.vo.Customer;
  * @description
  */
 public class WebConstants {
-	public static final String CURRENT_USER = "user_info";
 	public static final String CURRENT_CUSTOMER = "customer_info";
 	public static void setCustomer(HttpServletRequest request,Customer customer){
 		HttpSession session = request.getSession();

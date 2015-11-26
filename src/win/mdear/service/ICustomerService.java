@@ -21,6 +21,8 @@ public interface ICustomerService extends IBaseDAO<Customer, Serializable>{
 	public boolean deleteUser (Customer entity);
 	//查询
 	public List<Customer> findUser ();
+	//
+	public List<Customer> findCustomerByName(String name);
 	//根据用户名和密码登陆
 	public List<Customer> findCustomerByNameAndPwd(String name,String pwd);
 	

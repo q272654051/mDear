@@ -5,8 +5,8 @@ $(function(){
 function login(){
 	var username = $('#username').val();
 	var pwd = $('#pwd').val();
-	window.location.href="loginController/login";
-	alert(username+pwd);
+	var div = $('.search1');
+	
 	$.ajax({
 		type: "post",
         url: "loginController/login",
@@ -16,9 +16,16 @@ function login(){
         },
         dataType: "json",
         success: function(data){
+        	if(data['success']){
+        		//window.location.href='loginController/loginSuccess';
+        		alert(data['msg']);
+        		div.empty();
+        	}else{
+        		alert(data['msg']);
+        	}
         },
         error: function(data){
-        	alert("as");
+        	alert(data['msg']);
         }
 	});
 }

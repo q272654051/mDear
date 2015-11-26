@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="wrapper">
 <div class="header">
 	<div class="logo">
-		 <a href="index.jsp"><img src="/content/images/logo.png"> </a>
+		 <a href="index.jsp"><img src="content/images/logo.png"> </a>
 	</div>
 	<div class="cssmenu">
 	<ul>

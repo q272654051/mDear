@@ -108,7 +108,8 @@
 								<label>账号:</label> <input type="text" id="username" name="username" />
 								<label>密码:</label> <input type="password" id="pwd" name="pwd" />
 							</form>
-								<button type="submit" name="submit" class="submit" onclick="login()">Submit</button>
+								<button type="submit" id="login" class="submit" onclick="login()">登录</button>
+								<button type="submit" id="register" class="submit" onclick="register()">注册</button>
 						</div>
 					</div>
 					<!-- start content_right -->
