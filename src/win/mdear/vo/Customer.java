@@ -16,12 +16,22 @@ public class Customer implements java.io.Serializable {
 
 	// Fields
 
-	private Integer id;        //用户ID
-	private String userName;   //用户名
-	private String pwd;        //密码
-	private Integer status;    //状态
-	private Integer gender;    //性别
-
+	private Integer id;           //ID
+	private String userId;        //用户ID
+	private String userName;      //用户名
+	private String pwd;           //密码
+	private String nickName;      //昵称
+	private String phone;         //电话
+	private String email;         //邮箱
+	private String QQnumber;      //QQ
+	private String address;       //地址
+	private String realName;      //真实姓名
+	private String identityCard;  //身份证
+	private Integer status;       //状态
+	private Integer gender;       //性别
+	private String remark;        //备注
+	
+	
 	// Constructors
 
 	/** default constructor */
@@ -29,9 +39,20 @@ public class Customer implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Customer(String userName, String pwd, Integer status, Integer gender) {
+	public Customer(String userId, String userName, String pwd, String nickName, String phone, 
+			String email, String QQnumber, String address, String realName, String identityCard, 
+			String remark, Integer status, Integer gender) {
+		this.userId = userId;
 		this.userName = userName;
 		this.pwd = pwd;
+		this.nickName = nickName;
+		this.phone = phone;
+		this.email = email;
+		this.QQnumber = QQnumber;
+		this.address = address;
+		this.realName = realName;
+		this.identityCard = identityCard;
+		this.remark = remark;
 		this.status = status;
 		this.gender = gender;
 	}
@@ -66,6 +87,87 @@ public class Customer implements java.io.Serializable {
 		this.pwd = pwd;
 	}
 
+	@Column(name = "userId", length = 50)
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	@Column(name = "nickName", length = 50)
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	@Column(name = "phone", length = 50)
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	@Column(name = "email", length = 50)
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Column(name = "QQnumber", length = 50)
+	public String getQQnumber() {
+		return QQnumber;
+	}
+
+	public void setQQnumber(String qQnumber) {
+		QQnumber = qQnumber;
+	}
+
+	@Column(name = "address", length = 50)
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	@Column(name = "realName", length = 50)
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	@Column(name = "identityCard", length = 50)
+	public String getIdentityCard() {
+		return identityCard;
+	}
+
+	public void setIdentityCard(String identityCard) {
+		this.identityCard = identityCard;
+	}
+
+	@Column(name = "remark", length = 50)
+	public String getRemark() {
+		return remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+	
 	@Column(name = "status")
 	public Integer getStatus() {
 		return this.status;
