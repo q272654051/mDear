@@ -1,8 +1,9 @@
+#Sat Nov 28 11:38:33 CST 2015
 clsCnt=16
 eclipse.preferences.version=1
 locCnt=1064
 pkgCnt=16
 sTime=2015\u5E743\u670827\u65E5 \u661F\u671F\u4E94 \u4E0B\u534803\u65F639\u520636\u79D2 CST
 srcCnt=1
-validator.Checked=WebRoot/content/js/jquery-1.8.2.min.js,WebRoot/content/js/zepto.min.js,WebRoot/WEB-INF/views/fangchanguzhi/buyHousePageDetail.jsp,WebRoot/WEB-INF/views/my/myweituo/myWeituoDetail.jsp,WebRoot/content/js/jquery.min.js,WebRoot/content/plugin/jquery.ui.slider/js/jquery-plus-ui.min.js,WebRoot/content/js/echarts-all.js,WebRoot/content/js/funApp.js
+validator.Checked=WebRoot/content/js/modernizr.custom.53451.js,WebRoot/content/js/jquery-1.11.0.min.js,WebRoot/content/js/jquery-1.8.2.min.js,WebRoot/content/js/zepto.min.js,WebRoot/WEB-INF/views/fangchanguzhi/buyHousePageDetail.jsp,WebRoot/WEB-INF/views/my/myweituo/myWeituoDetail.jsp,WebRoot/content/js/jquery.min.js,WebRoot/content/plugin/jquery.ui.slider/js/jquery-plus-ui.min.js,WebRoot/content/js/echarts-all.js,WebRoot/content/js/funApp.js
 validator.Unchecked=

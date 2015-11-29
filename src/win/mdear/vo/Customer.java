@@ -27,7 +27,8 @@ public class Customer implements java.io.Serializable {
 	private String address;       //地址
 	private String realName;      //真实姓名
 	private String identityCard;  //身份证
-	private Integer status;       //状态
+	private Integer status = 0;   //状态
+	private Integer vip = 0;   //等级
 	private Integer gender;       //性别
 	private String remark;        //备注
 	
@@ -41,7 +42,7 @@ public class Customer implements java.io.Serializable {
 	/** full constructor */
 	public Customer(String userId, String userName, String pwd, String nickName, String phone, 
 			String email, String QQnumber, String address, String realName, String identityCard, 
-			String remark, Integer status, Integer gender) {
+			String remark, Integer status, Integer vip, Integer gender) {
 		this.userId = userId;
 		this.userName = userName;
 		this.pwd = pwd;
@@ -54,6 +55,7 @@ public class Customer implements java.io.Serializable {
 		this.identityCard = identityCard;
 		this.remark = remark;
 		this.status = status;
+		this.vip = vip;
 		this.gender = gender;
 	}
 
@@ -175,6 +177,15 @@ public class Customer implements java.io.Serializable {
 
 	public void setStatus(Integer status) {
 		this.status = status;
+	}
+	
+	@Column(name = "vip")
+	public Integer getVip() {
+		return this.vip;
+	}
+	
+	public void setVip(Integer vip) {
+		this.vip = vip;
 	}
 
 	@Column(name = "gender")

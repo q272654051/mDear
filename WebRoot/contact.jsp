@@ -3,75 +3,73 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<jsp:include page="content/jsp/header.jsp" />
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<link href="content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="keywords" content="PhotoBook Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="content/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="content/css/style.css" rel='stylesheet' type='text/css' />
+<script src="content/js/jquery-1.11.0.min.js"></script>
+<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="content/js/move-top.js"></script>
+<script type="text/javascript" src="content/js/easing.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--start-smoth-scrolling-->
 </head>
 <body>
-<!-- start content -->
-<div class="content_bg">
-<div class="wrap">
-<div class="wrapper">
-	<div class="main">
-<div class="section group">				
-				<div class="col span_1_of_2">
-      			<div class="company_address">
-				     	<h2 class="style">Company Address </h2>
-						<p>500 Lorem Ipsum Dolor Sit,</p>
-						<p>22-56-2-9 Sit Amet, Lorem,</p>
-						<p>USA</p>
-				   		<p>Phone:(00) 222 666 444</p>
-				   		<p>Fax: (000) 000 00 00 0</p>
-				 	 	<p>Email: <span>info(at)mycompany.com</span></p>
-				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
-				   </div>
-					<div class="contact_info">
-			    	 	<h2 class="style">Find Us Here</h2>
-			    	 		<div class="map">
-					   			<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color: #9E9D9D;text-align:left;font-size:13px">View Larger Map</a></small>
-					   		</div>
-      				</div>				   
-				   <div class="clear"></div>
-				</div>				
-				<div class="col span_2_of_4">
-				  <div class="contact-form">
-				  	<h2 class="style">Contact Us</h2>
-					       <form method="post" action="contact-post.jsp">
-					    	<div>
-						    	<span><label>NAME</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>E-MAIL</label></span>
-						    	<span><input name="userEmail" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						     	<span><label>MOBILE</label></span>
-						    	<span><input name="userPhone" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>SUBJECT</label></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
-						    </div>
-						   <div>
-						   		<span><input type="submit" value="Send Us"></span>
-						  </div>
-					    </form>
-
-				    </div>
-  				</div>		
-  			<div class="clear"></div>
-		  </div>
+	<jsp:include page="content/jsp/header.jsp"></jsp:include>
+	<!--contact-->
+	<div class="contact">
+		<div class="container">
+			<div class="contact-top">
+				<h3><span>C</span>ONTACT</h3>
+			</div>
+			<div class="contact-bottom">
+				<div class="col-md-6 contact-left">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d217800.4942262004!2d75.652658!3d31.465535000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spunjab+and+sind+bank+near+Zahura%2C+Punjab!5e0!3m2!1sen!2sin!4v1431686778373" frameborder="0" style="border:0"></iframe>
+				</div>
+				<div class="col-md-6 contact-left">
+					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
+					<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
+					<input type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" />
+					<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+					<div class="submit-btn">
+						<input type="submit" value="SUBMIT">
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="contact-text">
+				<div class="col-md-4 contact-text-left">
+					<span class="msg"> </span>
+					<p><a href="mailto:example@email.com">mail@user.com</a></p>
+				</div>
+				<div class="col-md-4 contact-text-left">
+					<span class="ph"> </span>
+					<p>+1 234 567 9871</p>
+				</div>
+				<div class="col-md-4 contact-text-left">
+					<span class="area"> </span>
+					<p>756 gt globel Place,<label>CD-Road,M 07 435.</label></p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
 	</div>
-</div>
-</div>
-</div>
+	<!--contact-->
+	<jsp:include page="content/jsp/footer.jsp"></jsp:include>
 </body>
-<jsp:include page="content/jsp/footer.jsp" />
 </html>

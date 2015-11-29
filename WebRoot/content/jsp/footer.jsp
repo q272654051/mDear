@@ -3,37 +3,69 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE HTML>
 <html>
-<head>
-<title>MainDear</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<link href="content/css/style.css" rel="stylesheet" type="text/css" media="all" />
-
-  </head>
-  
-  <body>
-  <div class="footer_bg">
-<div class="wrap">
-<div class="wrapper">
+	<!--footer-->
 	<div class="footer">
-		<div class="copy">
-			<p class="w3-link">Copyright &copy; 2015.MainDear All rights reserved.<a target="_blank" href="http://www.baidu.com/">xxx</a> </p>
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-8 footer-left">
+					<div class="col-md-4 footer-one">
+						<ul>
+							<li><a href="about.jsp">关于我们</a></li>
+							<li><a href="careers.jsp">Careers</a></li>
+							<li><a href="404.jsp">Help</a></li>
+							<li><a href="blog.jsp">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 footer-one">
+						<ul>
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Payment</a></li>
+							<li><a href="#">Shipping</a></li>
+							<li><a href="contact.jsp">Contact</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 footer-one">
+						<ul>
+							<li><a href="#">LIGHTBOOK</a></li>
+							<li><a href="#">CLASSICBOOK</a></li>
+							<li><a href="#">PREMIUMBOOK</a></li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 footer-right">
+					<div class="footer-two">
+						<ul>
+							<li><a href="#"><span class="fb"></span></a></li>
+							<li><a href="#"><span class="b"></span></a></li>
+							<li><a href="#"><span class="cam"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="footer-bottom">
+				<p>Copyright &copy; 2015. www.mDear.win All rights reserved.<br>
+				星禹记忆|记忆的搬运工<!--  <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> --></p>
+			</div>
 		</div>
-		<div class="f_nav">
-		<ul>
-			<li><a href="#">Skype</a></li>
-			<li><a href="#">Linked in</a></li>
-			<li><a href="#">Twitter</a></li>
-			<li><a href="#">Facebook</a></li>
-		</ul>
-		</div>
-		<div class="clear"></div>
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	</div>
-</div>
-</div>
-</div>
-  </body>
+	<!--footer-->
 </html>

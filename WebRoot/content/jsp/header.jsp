@@ -3,75 +3,93 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE HTML>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
-<head>
-<title>MainDear</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<link href="content/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script type='text/javascript' src='content/js/jquery.min.js'></script>
-
-  </head>
-  
-  <body>
-  <!--start header-->
-<div class="h_bg">
-<div class="wrap">
-<div class="wrapper">
-<div class="header">
-	<div class="logo">
-		 <a href="index.jsp"><img src="content/images/logo.png"> </a>
+	<!--header-->
+	<div class="header-top" id="home">
+		<div class="container">
+			<div class="head">
+				<div class="header-left">
+					<div class="logo">
+						<a href="index.jsp"><img src="content/images/logo.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="header-right">
+					<c:if test="${sessionScope.user_info.userName==null }">
+						<p>请登录</p>
+					</c:if>
+					<c:if test="${sessionScope.user_info.userName!=null }">
+						<p>${sessionScope.user_info.userName }</p>
+					</c:if>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="top-nav">
+						<div class="nav-icon">
+							<a href="#" class="right_bt" id="activator"><span> </span> </a>
+						</div>
+						 <div class="box" id="box">
+							 <div class="box_content">        					                         
+								<div class="box_content_center">
+								 	<div class="form_content">
+										<div class="menu_box_list">
+											<ul>
+												<li><a href="index.jsp"><span>首页</span></a></li>
+												<li><a href="careers.jsp"><span>Careers</span></a></li>
+												<li><a href="blog.jsp"><span>Blog</span></a></li>
+												<li><a href="contact.jsp"><span>Contact</span></a></li>
+												<li><a href="about.jsp"><span>关于我们</span></a></li>
+												<li><a href="404.jsp"><span>Help</span></a></li>
+												<div class="clearfix"> </div>
+											</ul>
+										</div>
+										<a class="boxclose" id="boxclose"> <span> </span></a>
+									</div>                                  
+								</div> 	
+							</div>  	  
+						</div>
+					<!---start-click-drop-down-menu----->
+			        <!----start-dropdown--->
+			         <script type="text/javascript">
+						var $ = jQuery.noConflict();
+							$(function() {
+								$('#activator').click(function(){
+									$('#box').animate({'top':'0px'},900);
+								});
+								$('#boxclose').click(function(){
+								$('#box').animate({'top':'-1000px'},900);
+								});
+							});
+							$(document).ready(function(){
+							//Hide (Collapse) the toggle containers on load
+							$(".toggle_container").hide(); 
+							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+							$(".trigger").click(function(){
+								$(this).toggleClass("active").next().slideToggle("500");
+									return false; //Prevent the browser jump to the link anchor
+							});
+												
+						});
+					</script>
+					<!---//End-click-drop-down-menu----->
+					<!--top-nav---->
+				</div>
+				<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"> </span>
+						</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="cssmenu">
-	<ul>
-	   <li id="home"><a href="index.jsp"><span>首页</span></a></li>
-	   <li id="about"><a href="about.jsp"><span>About</span></a></li>
-	   <li class="has-sub" id="services"><a href="service.jsp"><span>Services</span></a>
-	      <ul>
-	         <li class="has-sub"><a href="service.jsp"><span>Service 1</span></a>
-	            <ul>
-	               <li><a href="service.jsp"><span>Sub Item</span></a></li>
-	               <li class="last"><a href="service.jsp"><span>Sub Item</span></a></li>
-	            </ul>
-	         </li>
-	         <li class="has-sub"><a href="service.jsp"><span>Service 2</span></a>
-	            <ul>
-	               <li><a href="service.jsp"><span>Sub Item</span></a></li>
-	               <li class="last"><a href="service.jsp"><span>Sub Item</span></a></li>
-	            </ul>
-	         </li>
-	      </ul>
-	   </li>
-	   <li class="last" id="contact"><a href="contact.jsp"><span>Contact</span></a></li>
-	 <div class="clear"></div>
-	 </ul>
-	</div>
-	<div class="clear"></div>
-</div>
-</div>
-</div>
-</div>
-</body>
-<script type="text/javascript">
-$(function(){
-	$("#home").click(function(){
-		$("#home").addClass("active");
-		console.log("home");
-	});
-	$("#about").click(function(){
-		console.log("about");
-		$("#about").addClass("active");
-	});
-	$("#services").click(function(){
-		console.log("services");
-		$("#services").addClass("active");
-	});
-	$("#contact").click(function(){
-		console.log("contact");
-		$("#contact").addClass("active");
-	});
-});
-</script>
+	<!--//header-->
+	<!--search-scripts-->
+	<script src="content/js/uisearch.js"></script>
+	<script src="content/js/classie.js"></script>	
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
+	<!--//search-scripts-->
 </html>
