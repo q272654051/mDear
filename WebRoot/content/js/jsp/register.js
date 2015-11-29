@@ -2,14 +2,13 @@ $(function(){
 	
 });
 
-function login(){
+function register(){
 	var username = $('#username').val();
 	var pwd = $('#pwd').val();
-	var div = $('.search1');
 	
 	$.ajax({
 		type: "post",
-        url: "loginController/login",
+        url: "registerController/register",
         data: {
         	"username":username,
         	"pwd":pwd
@@ -19,7 +18,6 @@ function login(){
         	if(data['success']){
         		//window.location.href='loginController/loginSuccess';
         		alert(data['msg']);
-        		div.empty();
         	}else{
         		alert(data['msg']);
         	}

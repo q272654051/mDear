@@ -1,4 +1,4 @@
-#Sat Nov 28 12:37:36 CST 2015
+#Sun Nov 29 23:59:15 CST 2015
 eclipse.preferences.version=1
 encoding//WebRoot/404.jsp=UTF-8
 encoding//WebRoot/MyJsp.jsp=UTF-8
@@ -6,4 +6,5 @@ encoding//WebRoot/careers.jsp=UTF-8
 encoding//WebRoot/contact.jsp=UTF-8
 encoding//WebRoot/content/jsp/footer.jsp=UTF-8
 encoding//WebRoot/index.jsp=UTF-8
+encoding//WebRoot/register.jsp=UTF-8
 encoding/<project>=UTF-8

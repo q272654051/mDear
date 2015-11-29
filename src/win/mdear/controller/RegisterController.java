@@ -22,19 +22,19 @@ import win.mdear.vo.Customer;
 
 
 @Controller
-@RequestMapping("/loginController")
-public class LoginController {
+@RequestMapping("/registerController")
+public class RegisterController {
 	
 	@Resource
     ICustomerService customerService;
 	
 	/**
-	 * 用户登录验证
+	 * 用户注册
 	 * @param request
 	 * @param response
 	 * @return
 	 */
-	@RequestMapping(value="/login")
+	@RequestMapping(value="/register")
 	public void login(HttpServletRequest request, HttpServletResponse response, PrintWriter printWriter){
 		Map<String,Object> result_map = new HashMap<String,Object>();
 		Customer customer = new Customer();

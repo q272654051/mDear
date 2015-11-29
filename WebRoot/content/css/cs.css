@@ -1,0 +1,17 @@
+.wramp{
+	width:1024px;
+	height:600px;
+	/*background:#90EE90;*/
+	margin:0 auto;
+	padding:5px;
+}
+.tab{
+	width:360px;
+	height:300px;
+	/*background:green;*/
+	float:right;
+	margin:100px 100px;
+	border-radius:10px;
+	border:solid #cccccc;
+}
+
