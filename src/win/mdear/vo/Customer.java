@@ -16,21 +16,20 @@ public class Customer implements java.io.Serializable {
 
 	// Fields
 
-	private Integer id;           //ID
-	private String userId;        //用户ID
-	private String userName;      //用户名
-	private String pwd;           //密码
-	private String nickName;      //昵称
-	private String phone;         //电话
-	private String email;         //邮箱
-	private String QQnumber;      //QQ
-	private String address;       //地址
-	private String realName;      //真实姓名
-	private String identityCard;  //身份证
-	private Integer status = 0;   //状态
-	private Integer vip = 0;   //等级
-	private Integer gender;       //性别
-	private String remark;        //备注
+	private String userId = "";        //用户ID
+	private String userName = "";      //用户名
+	private String pwd = "";           //密码
+	private String nickName = "";      //昵称
+	private String phone = "";         //电话
+	private String email = "";         //邮箱
+	private String qqnumber = "";      //QQ
+	private String address = "";       //地址
+	private String realName = "";      //真实姓名
+	private String identityCard = "";  //身份证
+	private Integer status = 0;        //状态
+	private Integer vip = 0;           //等级
+	private Integer gender = 3;        //性别
+	private String remark = "";        //备注
 	
 	
 	// Constructors
@@ -41,7 +40,7 @@ public class Customer implements java.io.Serializable {
 
 	/** full constructor */
 	public Customer(String userId, String userName, String pwd, String nickName, String phone, 
-			String email, String QQnumber, String address, String realName, String identityCard, 
+			String email, String qqnumber, String address, String realName, String identityCard, 
 			String remark, Integer status, Integer vip, Integer gender) {
 		this.userId = userId;
 		this.userName = userName;
@@ -49,7 +48,7 @@ public class Customer implements java.io.Serializable {
 		this.nickName = nickName;
 		this.phone = phone;
 		this.email = email;
-		this.QQnumber = QQnumber;
+		this.qqnumber = qqnumber;
 		this.address = address;
 		this.realName = realName;
 		this.identityCard = identityCard;
@@ -62,15 +61,15 @@ public class Customer implements java.io.Serializable {
 	// Property accessors
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
-	public Integer getId() {
-		return this.id;
+	@Column(name = "userid", length = 50, unique = true, nullable = false)
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-
+	
 	@Column(name = "userName", length = 50)
 	public String getUserName() {
 		return this.userName;
@@ -87,15 +86,6 @@ public class Customer implements java.io.Serializable {
 
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
-	}
-
-	@Column(name = "userId", length = 50)
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
 	}
 
 	@Column(name = "nickName", length = 50)
@@ -125,13 +115,13 @@ public class Customer implements java.io.Serializable {
 		this.email = email;
 	}
 
-	@Column(name = "QQnumber", length = 50)
+	@Column(name = "qqnumber", length = 50)
 	public String getQQnumber() {
-		return QQnumber;
+		return qqnumber;
 	}
 
 	public void setQQnumber(String qQnumber) {
-		QQnumber = qQnumber;
+		qqnumber = qQnumber;
 	}
 
 	@Column(name = "address", length = 50)

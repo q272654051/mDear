@@ -52,27 +52,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="services-top">
 				<div class="col-md-3 services-left">
 					<img src="content/images/service-1.png" alt="" />
-					<p>Download photos</p>
-					<span class="s-one"> </span>
-				</div>
-				<div class="col-md-3 services-left">
-					<img src="content/images/service-2.png" alt="" />
-					<p>Design photobook</p>
+					<p>线上下单</p>
 					<span class="s-one"> </span>
 				</div>
 				<div class="col-md-3 services-left">
 					<img src="content/images/service-3.png" alt="" />
-					<p>Pay for service</p>
+					<p>支付费用</p>
+					<span class="s-one"> </span>
+				</div>
+				<div class="col-md-3 services-left">
+					<img src="content/images/service-2.png" alt="" />
+					<p>等待收取</p>
 					<span class="s-tre"> </span>
 				</div>
 				<div class="col-md-3 services-left">
 					<img src="content/images/service-4.png" alt="" />
-					<p>Get your photobook</p>
+					<p>入库存放</p>
 					<span class="s-two"> </span>
 				</div>
 				<div class="col-md-3 services-left">
 					<img src="content/images/service-5.png" alt="" />
-					<p>Get your photobook</p>
+					<p>到期送出</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -91,8 +91,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     					<div class="thumbnail">
       						<img src="content/images/ad-1.png" alt="" />
       							<div class="caption">
-        	 						<h3>Import photos from</h3>
-        					 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ora incidunt ut labore.</p>
+        	 						<h3>珍藏珍贵记忆</h3>
+        					 		<p>刚刚迈入大学的校门，总是憧憬即将来到大学生活，给毕业后的自己写封信或者录个视频吧，我们帮你把记忆存下来，作为毕业纪念给你一份特别的回忆； 刚刚步入婚姻的殿堂，给未来的美满幸福一个承诺吧，我们帮您存下这段美好，几年后你会收到意想不到的惊喜。</p>
          						</div>
     					</div>
   					</div>
@@ -100,8 +100,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     					<div class="thumbnail">
       						<img src="content/images/ad-2.png" alt="" />
       							<div class="caption">
-        	 						<h3>Photo editing</h3>
-        					 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ora incidunt ut labore.</p>
+        	 						<h3>存放纪念价值</h3>
+        					 		<p>一组孩童时代的照片，一本儿时的纪念册，到你长大之后突然收到关于自己儿时的记忆，也许是姗姗学步时妈妈的骄傲拍摄，也许是嬉笑打闹时爸爸的无意记录，此时热泪盈眶的你是否会想起多久没有回家看看了。</p>
          						</div>
     					</div>
   					</div>
@@ -109,8 +109,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     					<div class="thumbnail">
       						<img src="content/images/ad-3.png" alt="" />
       							<div class="caption">
-        	 						<h3>Templates</h3>
-        					 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing. Ut enim ad minim, nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+        	 						<h3>传递真挚情感</h3>
+        					 		<p>好朋友很多，想在过生日的时候都送上自己真挚的祝福，然而总会有遗忘，现在不用担心了，选好他们喜欢的礼物交给我们，只要给一个时间，无论风雨，情谊保证按时送达。</p>
          						</div>
     					</div>
   					</div>
@@ -139,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><img src="content/images/correct.png" alt="" /> <p>12 pages</p></li>
 								<li><img src="content/images/correct.png" alt="" /> <p>binding on the clip</p></li>
 							</ul>
-							<h5><img src="content/images/dolor.png" class="dolor" alt="" />129</h5>
+							<h5><!-- <img src="content/images/dolor.png" class="dolor" alt="" /> -->￥129</h5>
 						</div>
 						<div class="s-btn">
 							<a href="#">点击封存记忆</a>
@@ -156,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><img src="content/images/correct.png" alt="" /> <p>12 pages</p></li>
 								<li><img src="content/images/correct.png" alt="" /> <p>binding on the clip</p></li>
 							</ul>
-							<h5><img src="content/images/dolor.png" class="dolor" alt="" />239</h5>
+							<h5><!-- <img src="content/images/dolor.png" class="dolor" alt="" /> -->￥239</h5>
 						</div>
 						<div class="s-btn">
 							<a href="#">点击封存记忆</a>
@@ -172,7 +172,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><img src="content/images/correct.png" alt="" /> <p>12 pages</p></li>
 								<li><img src="content/images/correct.png" alt="" /> <p>binding on the clip</p></li>
 							</ul>
-							<h5><img src="content/images/dolor.png" class="dolor" alt="" />759</h5>
+							<h5><!-- <img src="content/images/dolor.png" class="dolor" alt="" /> -->￥759</h5>
 						</div>
 						<div class="s-btn">
 							<a href="#">点击封存记忆</a>

@@ -50,8 +50,8 @@ public class LoginController {
 						result_map.put("success", true);
 						result_map.put("data", customer);
 						result_map.put("msg", "登录成功");
-						request.getSession().setAttribute("customerId",customer.getId()+"");         //存储登陆人id
-						request.getSession().setMaxInactiveInterval(60);                           //设置超时时间3600s
+						request.getSession().setAttribute("customerId",customer.getUserId()+"");         //存储登陆人id
+						request.getSession().setMaxInactiveInterval(3600);                           //设置超时时间3600s
 						WebConstants.setCustomer(request, customer);
 					} else {
 						result_map.put("success", false);

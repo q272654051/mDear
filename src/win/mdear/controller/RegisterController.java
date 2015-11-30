@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -29,6 +30,36 @@ public class RegisterController {
     ICustomerService customerService;
 	
 	/**
+	 * 用户名重复检测
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@RequestMapping(value="/registercheck")
+	public void registercheck(HttpServletRequest request, HttpServletResponse response, PrintWriter printWriter){
+		Map<String,Object> result_map = new HashMap<String,Object>();
+		String name = request.getParameter("username");
+		
+		try{
+			List<Customer> list = customerService.findCustomerByName(name);
+			if (list.size()>0){
+						result_map.put("success", true);
+						result_map.put("msg", "该用户已存在");
+			} else {
+				result_map.put("success", false);
+				result_map.put("msg", "该用户不存在");
+			}
+		}catch(Exception e){
+			result_map.put("success", false);
+			result_map.put("msg", "系统错误请稍后再试。");
+		}
+		printWriter.print(JsonUtil.jsonObject(result_map, null, null));
+		printWriter.flush();
+		printWriter.close();
+	}
+	
+	
+	/**
 	 * 用户注册
 	 * @param request
 	 * @param response
@@ -40,30 +71,24 @@ public class RegisterController {
 		Customer customer = new Customer();
 		String name = request.getParameter("username");
 		String pwd = request.getParameter("password");
+		String phone = request.getParameter("phone");
+		String email = request.getParameter("email");
+		
+		customer.setUserId(UUID.randomUUID()+"");
+		customer.setUserName(name);
+		customer.setPwd(pwd);
+		customer.setPhone(phone);
+		customer.setEmail(email);
 		
 		try{
-			List<Customer> list = customerService.findCustomerByName(name);
-			if (list.size()>0){
-				customer = list.get(0);
-				if (customer.getStatus()==0){
-					if (pwd.equals(customer.getPwd())){
-						result_map.put("success", true);
-						result_map.put("data", customer);
-						result_map.put("msg", "登录成功");
-						request.getSession().setAttribute("customerId",customer.getId()+"");         //存储登陆人id
-						request.getSession().setMaxInactiveInterval(60);                           //设置超时时间3600s
-						WebConstants.setCustomer(request, customer);
-					} else {
-						result_map.put("success", false);
-						result_map.put("msg", "密码错误");
-					}
-				} else {
-					result_map.put("success", false);
-					result_map.put("msg", "该用户已被锁定");
-				}
+			boolean con = customerService.saveCustomer(customer);
+			
+			if (con){
+				result_map.put("success", true);
+				result_map.put("msg", "注册成功！");
 			} else {
 				result_map.put("success", false);
-				result_map.put("msg", "该用户不存在");
+				result_map.put("msg", "注册失败，请重试！");
 			}
 		}catch(Exception e){
 			result_map.put("success", false);

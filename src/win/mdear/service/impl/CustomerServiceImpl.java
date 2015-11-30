@@ -23,28 +23,28 @@ public class CustomerServiceImpl  extends BaseDao<Customer> implements ICustomer
         this.setClazz(Customer.class);
     }
 	@Override
-	public boolean saveUser(Customer entity) {
+	public boolean saveCustomer(Customer entity) {
 		// TODO Auto-generated method stub
-		return this.saveUser(entity);
+		return this.saveEntity(entity);
 		
 	}
 
 	@Override
-	public boolean updateUser(Customer id) {
+	public boolean updateCustomer(Customer id) {
 		// TODO Auto-generated method stub
-		return this.updateUser(id);
+		return this.updateEntity(id);
 	}
 
 	@Override
-	public boolean deleteUser(Customer entity) {
+	public boolean deleteCustomer(Customer entity) {
 		// TODO Auto-generated method stub
-		return this.deleteUser(entity);
+		return this.deleteEntity(entity);
 	}
 
 	@Override
-	public List<Customer> findUser() {
+	public List<Customer> findCustomer() {
 		// TODO Auto-generated method stub
-		return this.findUser();
+		return this.findCustomer();
 	}
 
 	@Override

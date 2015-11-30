@@ -16,11 +16,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				</div>
 				<div class="header-right">
-					<c:if test="${sessionScope.customer_info.nickName==null }">
-						<p><a href="login.jsp">请登录</p>
+					<c:if test="${sessionScope.customer_info.userName==null }">
+						<p><a href="login.jsp">请登录</a></p>
 					</c:if>
-					<c:if test="${sessionScope.customer_info.nickName!=null }">
-						<p>${sessionScope.customer_info.nickName }</p>
+					<c:if test="${sessionScope.customer_info.userName!=null }">
+						<c:choose>
+							<c:when test="${sessionScope.customer_info.nickName!=null }"><p>${sessionScope.customer_info.userName }</p></c:when>
+							<c:otherwise><p>${sessionScope.customer_info.userName }</p></c:otherwise>
+						</c:choose>
 					</c:if>
 				</div>
 				<div class="clearfix"> </div>

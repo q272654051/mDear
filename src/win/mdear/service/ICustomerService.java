@@ -14,13 +14,13 @@ import win.mdear.vo.Customer;
 public interface ICustomerService extends IBaseDAO<Customer, Serializable>{
 
 	//保存
-	public boolean saveUser (Customer entity);
+	public boolean saveCustomer (Customer entity);
 	//修改
-	public boolean updateUser (Customer id);
+	public boolean updateCustomer (Customer id);
 	//删除
-	public boolean deleteUser (Customer entity);
+	public boolean deleteCustomer (Customer entity);
 	//查询
-	public List<Customer> findUser ();
+	public List<Customer> findCustomer ();
 	//
 	public List<Customer> findCustomerByName(String name);
 	//根据用户名和密码登陆
