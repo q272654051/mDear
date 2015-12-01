@@ -28,7 +28,7 @@ public class Customer implements java.io.Serializable {
 	private String identityCard = "";  //身份证
 	private Integer status = 0;        //状态
 	private Integer vip = 0;           //等级
-	private Integer gender = 3;        //性别
+	private Integer gender;            //性别
 	private String remark = "";        //备注
 	
 	
@@ -60,7 +60,6 @@ public class Customer implements java.io.Serializable {
 
 	// Property accessors
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "userid", length = 50, unique = true, nullable = false)
 	public String getUserId() {
 		return userId;

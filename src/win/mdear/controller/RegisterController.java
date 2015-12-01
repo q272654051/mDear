@@ -86,6 +86,9 @@ public class RegisterController {
 			if (con){
 				result_map.put("success", true);
 				result_map.put("msg", "注册成功！");
+				request.getSession().setAttribute("customerId",customer.getUserId()+"");         //存储登陆人id
+				request.getSession().setMaxInactiveInterval(3600);                           //设置超时时间3600s
+				WebConstants.setCustomer(request, customer);
 			} else {
 				result_map.put("success", false);
 				result_map.put("msg", "注册失败，请重试！");
